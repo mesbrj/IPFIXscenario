@@ -11,7 +11,7 @@
 **IPyFIXweb**: https://github.com/mesbrj/IPyFIXweb (WIP)
   - Python FastAPI REST (HATEOAS-driven) API (OpenAPI compliant)
   - Core [IPFIX Services](https://tools.netsa.cert.org/pyfixbuf/doc/index.html): Collector, Mediation, Exporter and Analyzer
-  - [keepalived](https://www.keepalived.org/) (VRRP, [LVS/IPVS](http://www.linux-vs.org/)) for high availability and load balancing of IPFIX TCP (collector and exporter) services
+  - [keepalived](https://www.keepalived.org/) (VRRP, [LVS/IPVS](http://www.linux-vs.org/)) for high availability and load balancing of IPFIX collectors (TCP)
   - Integration with [IPjFIXsvc](https://github.com/mesbrj/IPjFIXsvc) for sending (transformed / converted) flow records (IPFIX mediation)
   - [PCAP converter/exporter IPFIX and DPI analysis](https://tools.netsa.cert.org/yaf/yaf.html)
   - [MinIO](https://min.io/) object storage for flow records
