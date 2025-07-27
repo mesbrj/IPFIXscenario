@@ -4,15 +4,17 @@
 
 ## Components
 
-[**Apache APISIX API Gateway**](https://apisix.apache.org/):
+... (with) [Apache APISIX API Gateway](https://apisix.apache.org/) ...
 
 ![IPFIXscenario](/documentation/images/apisix.png)
 
 **IPyFIXweb**: https://github.com/mesbrj/IPyFIXweb (WIP)
   - Python FastAPI REST (HATEOAS-driven) API (OpenAPI compliant)
   - Core [IPFIX Services](https://tools.netsa.cert.org/pyfixbuf/doc/index.html): Collector, Mediation, Exporter and Analyzer
+  - [keepalived](https://www.keepalived.org/) (VRRP, [LVS/IPVS](http://www.linux-vs.org/)) for high availability and load balancing of IPFIX TCP (collector and exporter) services
   - Integration with [IPjFIXsvc](https://github.com/mesbrj/IPjFIXsvc) for sending (transformed / converted) flow records (IPFIX mediation)
   - [PCAP converter/exporter IPFIX and DPI analysis](https://tools.netsa.cert.org/yaf/yaf.html)
+  - [MinIO](https://min.io/) object storage for flow records
   - [RRDTool](https://oss.oetiker.ch/rrdtool/) or [Graphite](https://graphiteapp.org/) for Time series analysis for flow records
   - [Lua integration](https://github.com/scoder/lupa) via [LuaJIT](https://luajit.org/) for custom (on the fly) processing and analysis
   - AI agent for: IPFIX collector and (mediator) exporter / IPFIX mediator pipelines / tasks and analysis
@@ -28,8 +30,8 @@
 **IPjFIXqry**: Java Spring Boot - GraphQL API + Read-only ODATA proxy
   - GraphQL API for flexible data querying
   - Read-only ODATA proxy for data access and querying
+  - Distributed Cache with [Hazelcast](https://hazelcast.com/) ([Community Edition](https://hazelcast.com/community-edition-projects/downloads/)) for performance optimization on ODATA models
   - Integration with [IPjFIXsvc](https://github.com/mesbrj/IPjFIXsvc) for data retrieval
-  - Distributed Cache with [Hazelcast](https://hazelcast.com/) for performance optimization on ODATA models
   - AI agent for (query optimization and data analytics and insights ...)
 
 **IPFIXcommand**: Golang based Terminal UI for system control and monitoring
