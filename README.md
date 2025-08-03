@@ -34,7 +34,8 @@
   - Integration with [IPjFIXsvc](https://github.com/mesbrj/IPjFIXsvc) for data retrieval
   - AI agent for (query optimization and data analytics and insights ...)
 
-**IPFIXcommand**: Golang based Terminal UI for system control and monitoring
+**IPFIXcommand**: https://github.com/mesbrj/IPFIXcommand (WIP)
+  - Golang based Terminal UI for system control and monitoring
   - Command-line interface for system administration
   - Real-time monitoring and configuration management
   - Performance metrics and system health monitoring
