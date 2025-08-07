@@ -2,11 +2,30 @@
 
 ## Project Overview
 
+### Deployments
+
+- Helm charts for Kubernetes
+- Development: docker compose / podman-kube
+
+### Kubernetes Operator
+
+IPFIXscenario Kubernetes Operator for managing the lifecycle of IPFIXscenario components in a Kubernetes environment using the [**Java operator SDK**](https://github.com/java-operator-sdk/java-operator-sdk).
+
 ## Components
 
-... (with) [Apache APISIX API Gateway](https://apisix.apache.org/) ...
-
 ![IPFIXscenario](/documentation/images/apisix.png)
+
+[**Ory**](https://www.ory.sh/open-source) IAM&CIAM with Identies management. 
+- [hydra](https://www.ory.sh/hydra/) for OAuth2 and OIDC, [kratos](https://www.ory.sh/kratos/) for user management and [keto](https://www.ory.sh/keto/) for access control.
+
+[**Apache APISIX** API Gateway](https://apisix.apache.org/):
+- APISIX as a centralized API Gateway for security, routing, and traffic management.
+- OAuth Integration - Native OAuth 2.0/OIDC token validation.
+- JWT Verification - Automatic token signature and claims validation
+- Rate Limiting - Per-client and global rate limiting policies
+- Load Balancing - Multiple algorithms with health checks
+- TLS Termination - Centralized certificate management
+- Request/Response Transformation - Header manipulation and data transformation
 
 **IPyFIXweb**: https://github.com/mesbrj/IPyFIXweb (WIP)
   - Python FastAPI REST (HATEOAS-driven) API (OpenAPI compliant)
@@ -30,7 +49,7 @@
 **IPjFIXqry**: Java Spring Boot - GraphQL API + Read-only ODATA proxy
   - GraphQL API for flexible data querying
   - Read-only ODATA proxy for data access and querying
-  - Distributed Cache with [Hazelcast](https://hazelcast.com/) ([Community Edition](https://hazelcast.com/community-edition-projects/downloads/)) for performance optimization on ODATA models
+  - Distributed Cache with [Hazelcast](https://hazelcast.com/) ([Community Edition](https://hazelcast.com/community-edition-projects/downloads/))
   - Integration with [IPjFIXsvc](https://github.com/mesbrj/IPjFIXsvc) for data retrieval
   - AI agent for (query optimization and data analytics and insights ...)
 
