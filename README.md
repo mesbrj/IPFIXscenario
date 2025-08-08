@@ -7,16 +7,16 @@
 - Helm charts for Kubernetes
 - Development: docker compose / podman-kube
 
-### Kubernetes Operator
-
-IPFIXscenario Kubernetes Operator for managing the lifecycle of IPFIXscenario components in a Kubernetes environment using the [**Java operator SDK**](https://github.com/java-operator-sdk/java-operator-sdk).
-
 ## Components
 
 ![IPFIXscenario](/documentation/images/apisix.png)
 
-[**Ory**](https://www.ory.sh/open-source) IAM&CIAM with Identies management. 
+*[**Ory**](https://www.ory.sh/open-source) IAM&CIAM with Identies management (as reference stack and used in development and tests).*
 - [hydra](https://www.ory.sh/hydra/) for OAuth2 and OIDC, [kratos](https://www.ory.sh/kratos/) for user management and [keto](https://www.ory.sh/keto/) for access control.
+
+### Kubernetes Operator
+
+IPFIXscenario Kubernetes Operator for managing the lifecycle of below IPFIXscenario components in a Kubernetes environment using the [**Java operator SDK**](https://github.com/java-operator-sdk/java-operator-sdk):
 
 [**Apache APISIX** API Gateway](https://apisix.apache.org/):
 - APISIX as a centralized API Gateway for security, routing, and traffic management.
@@ -38,6 +38,13 @@ IPFIXscenario Kubernetes Operator for managing the lifecycle of IPFIXscenario co
   - [Lua integration](https://github.com/scoder/lupa) via [LuaJIT](https://luajit.org/) for custom (on the fly) processing and analysis
   - AI agent for: IPFIX collector and (mediator) exporter / IPFIX mediator pipelines / tasks and analysis
 
+**keep-a-remote**: https://github.com/mesbrj/keep-a-remote (WIP)
+  - Keepalived Go web REST API for managing keepalived instrumentation and telemetry
+  - Get, set and reload, securely and in monitored way, all keepalived configuration (keepalived.conf)
+  - Monitor status, metrics and health of keepalived daemon and related resources
+  - Deploy methods for Kubernetes (identifying the appropriate approaches and pre-requisites, for keepalived LB/HA features)
+  - Integration with [IPyFIXweb](https://github.com/mesbrj/IPyFIXweb) for IPFIX collector (TCP) service LB and HA
+
 **IPjFIXsvc**: https://github.com/mesbrj/IPjFIXsvc (WIP)
   - Java Spring Boot - [Olingo ODATA (Open Data Protocol V4)](https://olingo.apache.org/doc/odata4/index.html) REST API support
   - High-performance flow record ingestion and parsing / Real-time and batch processing capabilities
@@ -46,9 +53,9 @@ IPFIXscenario Kubernetes Operator for managing the lifecycle of IPFIXscenario co
   - [Lucene Core](https://lucene.apache.org/core/) or [Apache Solr](https://solr.apache.org/) for flow records search and indexing
   - AI agent for (intelligent data analysis and insights ...)
 
-**IPjFIXqry**: Java Spring Boot - GraphQL API + Read-only ODATA proxy
+**IPjFIXqry**: Java Spring Boot - (GraphQL API / ODATA proxy)
   - GraphQL API for flexible data querying
-  - Read-only ODATA proxy for data access and querying
+  - Read-only ODATA proxy for data access and querying \ GraphQL query only, implementation
   - Distributed Cache with [Hazelcast](https://hazelcast.com/) ([Community Edition](https://hazelcast.com/community-edition-projects/downloads/))
   - Integration with [IPjFIXsvc](https://github.com/mesbrj/IPjFIXsvc) for data retrieval
   - AI agent for (query optimization and data analytics and insights ...)
